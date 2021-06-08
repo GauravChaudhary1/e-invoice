@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +11,7 @@ export class NavbarComponent implements OnInit {
 
   @ViewChild("navitems") navItems?: ElementRef;
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
   }
@@ -19,10 +21,8 @@ export class NavbarComponent implements OnInit {
     (this.navItems?.nativeElement.classList.contains("navbar-desk")) ? 
         this.navItems?.nativeElement.classList.remove("navbar-desk") : 
         this.navItems?.nativeElement.classList.add("navbar-desk") ;
-
-    
-    
-
-    
+  }
+  navigateInvoice(e:any){
+    this.route.navigate(['invoice'])
   }
 }

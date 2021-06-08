@@ -9,7 +9,7 @@
       <button class="btn nav-right navbar-mob" (click)="menuClick($event)"><i class="fa fa-bars"></i></button>
       <ul class="nav navbar-nav nav-right navbar-main navbar-desk" #navitems>                
         <li><a href="#" >Home</a></li>
-        <li><a href="#">Invoice</a></li>
+        <li><a (click)="navigateInvoice($event)">Invoice</a></li>
         <li><a href="#">Contact Us</a></li>
         <li><a href="#">Sign In</a></li>
       </ul>
